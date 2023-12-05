@@ -1,0 +1,30 @@
+{
+  "name": "simbirsoft",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Клиент для дипломного проекта SimbirSoft",
+  "author": {
+    "email": "kireev.kirill2004@mail.ru",
+    "name": "Kirill Kireev",
+    "url": "https://t.me/ker4ik13"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.0.3"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.3"
+  }
+}
