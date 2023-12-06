@@ -1,0 +1,31 @@
+@import "@/shared/styles/_vars";
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+body.overflow {
+  overflow: hidden;
+}
+body.blur {
+  position: relative;
+  overflow: hidden;
+  transition: 0.2s;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 35, 32, 0.7);
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+  }
+}
+html {
+  scroll-padding-top: 70px;
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,9 @@
+@import "@/shared/styles/_vars";
+
+.nav {
+  display: flex;
+  align-items: center;
+  padding: rem(10);
+  background-color: #fefefe;
+  border-bottom: rem(1) solid #ebedf3;
+}

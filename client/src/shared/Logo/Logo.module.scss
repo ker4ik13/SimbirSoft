@@ -1,0 +1,15 @@
+@import "@/shared/styles/_vars";
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  @include manrope(700);
+  cursor: pointer;
+
+  & p {
+    color: $accent1;
+    font-size: rem(24);
+  }
+}
