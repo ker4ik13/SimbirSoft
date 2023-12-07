@@ -1,3 +1,7 @@
+import { EscortFirstScreen } from "@/widgets/EscortFirstScreen/EscortFirstScreen";
+
 export default function Home() {
-  return <main>main</main>;
+  return <main>
+    <EscortFirstScreen/>
+  </main>;
 }

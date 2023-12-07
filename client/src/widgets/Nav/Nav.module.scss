@@ -1,9 +1,35 @@
 @import "@/shared/styles/_vars";
 
 .nav {
-  display: flex;
-  align-items: center;
   padding: rem(10);
   background-color: #fefefe;
-  border-bottom: rem(1) solid #ebedf3;
+}
+.navWrapper {
+  @include container();
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: rem(10);
+
+  &:last-child {
+    border-top: rem(2) solid rgba(0, 0, 0, .1);
+  }
+}
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(20);
+  width: 100%;
+  margin-top: rem(10);
+}
+.navLink {
+  font-size: rem(18);
+  color: #000;
+  text-decoration: none;
+  transition: .2s;
+
+  &:hover {
+    opacity: .6;
+  }
 }

@@ -1,0 +1,56 @@
+@import "@/shared/styles/_vars";
+
+.firstScreen {
+    padding-bottom: rem(50);
+}
+.container {
+    @include container();
+}
+.title {
+    margin-top: rem(100);
+    font-size: rem(56);
+    font-weight: 800;
+    max-width: rem(700);
+    cursor: text;
+    line-height: 1.1;
+}
+.subtitle {
+    margin-top: rem(20);
+    font-weight: 300;
+    max-width: rem(700);
+    line-height: 1.3;
+    margin-bottom: rem(50);
+}
+.redButton {
+    padding: rem(18) rem(26);
+    border-radius: rem(6);
+    background-color: red;
+    text-decoration: none;
+    color: #fff;
+    font-size: rem(18);
+}
+.advantages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: rem(30);
+    margin-top: rem(150);
+    border-bottom: rem(2) solid rgba(0, 0, 0, .1);
+}
+.advantage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: rem(10);
+    padding-bottom: rem(50);
+}
+.icon {
+
+}
+.text {
+    text-align: center;
+    font-size: rem(16);
+    color: #000;
+    cursor: text;
+}
