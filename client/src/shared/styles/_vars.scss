@@ -2,13 +2,17 @@
 
 // Colors
 $accent1: #134bc5;
+$pink: #D93A4D;
 
 $shadow1: #f28c6b;
 
 $white: #ffffff;
 $beige: #c5b49e;
+$gray100: #fff;
+$gray500: #AAAFB5;
 
 $light-black: #212121;
+$black: #282A2B;
 
 // Text
 @mixin H1-1920() {
@@ -148,7 +152,7 @@ $light-black: #212121;
 }
 
 @mixin container() {
-  max-width: rem(1240);
+  max-width: rem(1400);
   padding: 0 20px;
   width: 100%;
   margin: 0 auto;

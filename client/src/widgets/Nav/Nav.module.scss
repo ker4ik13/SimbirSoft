@@ -11,6 +11,10 @@
   width: 100%;
   margin-bottom: rem(10);
 
+  &:first-child {
+    justify-content: space-between;
+  }
+
   &:last-child {
     border-top: rem(2) solid rgba(0, 0, 0, .1);
   }
@@ -25,11 +29,73 @@
 }
 .navLink {
   font-size: rem(18);
-  color: #000;
+  color: $black;
   text-decoration: none;
   transition: .2s;
 
   &:hover {
     opacity: .6;
   }
+}
+.contacts {
+  margin-left: rem(90);
+  display: flex;
+  align-items: center;
+  gap: rem(30);
+}
+.place {
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  color: $gray500;
+  text-decoration: none;
+
+  & svg {
+    width: rem(24);
+  }
+}
+.grayText {
+  color: $black;
+  @include manrope(300);
+  font-size: rem(18);
+  line-height: 1.5;
+  cursor: pointer;
+}
+.boldText {
+  color: $black;
+  @include manrope(600);
+  cursor: pointer;
+  font-size: rem(18);
+}
+.circleButton {
+  background-color: rgba(240, 198, 203, .25);
+  border-radius: rem(50);
+  padding: rem(10);
+  width: rem(44);
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $pink;
+
+  & svg {
+    width: rem(19);
+  }
+}
+.button {
+  background-color: rgba(240, 198, 203, .25);
+  border-radius: rem(50);
+  padding: rem(10) rem(22);
+  max-height: rem(44);
+  min-width: rem(44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $pink;
+  border: 0;
+  outline: none;
+  height: rem(44);
+  cursor: pointer;
+  line-height: 1.5;
+  font-weight: 600;
 }

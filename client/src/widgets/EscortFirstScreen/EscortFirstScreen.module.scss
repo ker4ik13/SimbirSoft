@@ -5,6 +5,7 @@
 }
 .container {
     @include container();
+    position: relative;
 }
 .title {
     margin-top: rem(100);
@@ -13,6 +14,9 @@
     max-width: rem(700);
     cursor: text;
     line-height: 1.1;
+}
+.string {
+    display: flex;
 }
 .subtitle {
     margin-top: rem(20);
@@ -24,10 +28,15 @@
 .redButton {
     padding: rem(18) rem(26);
     border-radius: rem(6);
-    background-color: red;
+    background-color: $pink;
     text-decoration: none;
-    color: #fff;
+    color: $gray100;
     font-size: rem(18);
+    transition: .2s;
+
+    &:hover {
+        background-color: darken($pink, 10%);
+    }
 }
 .advantages {
     display: flex;
@@ -35,7 +44,7 @@
     justify-content: space-between;
     width: 100%;
     gap: rem(30);
-    margin-top: rem(150);
+    margin-top: rem(60);
     border-bottom: rem(2) solid rgba(0, 0, 0, .1);
 }
 .advantage {
@@ -46,11 +55,18 @@
     padding-bottom: rem(50);
 }
 .icon {
-
+    width: rem(58);
+    aspect-ratio: 1/1;
 }
 .text {
     text-align: center;
     font-size: rem(16);
     color: #000;
     cursor: text;
+}
+.image {
+    max-width: rem(720);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
