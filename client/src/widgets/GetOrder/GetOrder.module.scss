@@ -3,6 +3,8 @@
 .getOrderPage {
     background-color: transparent;
     margin-top: rem(-330);
+    position: relative;
+    z-index: 2;
 }
 .getOrderModal {
     max-width: rem(1390);
@@ -77,6 +79,6 @@
     height: rem(70);
 
     &:hover {
-        background-color: darken($gray100, 10%);
+        filter: drop-shadow(0 0 rem(10) rgba(255, 255, 255, .3));
     }
 }

@@ -1,0 +1,73 @@
+@import "@/shared/styles/_vars";
+
+.footer {
+    background-color: $gray800;
+    padding: rem(70) 0;
+}
+.container {
+    @include container();
+}
+.containerWrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: rem(30);
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+    align-items: flex-start;
+
+    &:first-child {
+        max-width: rem(300);
+    }
+}
+.copy {
+    color: #828892;
+    @include manrope(300);
+    font-size: rem(14);
+}
+.linksTitle {
+    @include manrope(600);
+    font-size: rem(16);
+    color: #828892;
+}
+.link {
+    @include manrope(300);
+    color: #EEEEF1;
+    font-size: rem(16);
+    text-decoration: none;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+        opacity: .6;
+    }
+
+    &.big {
+        font-size: rem(26);
+    }
+}
+.linksRow {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+}
+.linkIcon {
+    text-decoration: none;
+    width: rem(35);
+
+    & svg  {
+        width: 100%;
+        height: 100%;
+    }
+
+    &:first-child {
+        color: #1C99DF;
+    }
+    &:last-child {
+        color: #4FC53D;
+        fill: #4FC53D;
+    }
+}

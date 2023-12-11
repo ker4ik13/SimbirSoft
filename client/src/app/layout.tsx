@@ -1,6 +1,7 @@
 import { Nav } from "@/widgets/Nav/Nav";
 import type { Metadata } from "next";
 import "./styles";
+import { Footer } from "@/widgets/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "СимбирСофт",
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body>
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -12,7 +12,7 @@ import client3 from '@/data/images/client3.png';
 import client4 from '@/data/images/client4.png';
 import client5 from '@/data/images/client5.png';
 
-const OurClients = () => {
+export const OurClients = () => {
   return (
     <div className={s.ourClientsPage}>
         <div className={s.container}>
@@ -70,5 +70,3 @@ const OurClients = () => {
     </div>
   )
 }
-
-export default OurClients
