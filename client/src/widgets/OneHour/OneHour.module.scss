@@ -1,57 +1,57 @@
 @import "@/shared/styles/_vars";
 
 .oneHourPage {
-    padding-top: rem(50);
-    background-color: #F9F9F9;
-    padding-bottom: rem(100);
+  padding-top: rem(50);
+  background-color: #f9f9f9;
+  padding-bottom: rem(100);
 }
 .container {
-    @include container();
+  @include container();
 }
 .title {
-    @include manrope(600);
-    font-size: rem(40);
-    color: $black;
-    text-align: center;
-    max-width: rem(625);
-    margin: 0 auto;
-    text-wrap: pretty;
+  @include manrope(600);
+  font-size: rem(40);
+  color: $black;
+  text-align: center;
+  max-width: rem(625);
+  margin: 0 auto;
+  text-wrap: pretty;
 }
 .cards {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: rem(30);
-    margin-top: rem(65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(30);
+  margin-top: rem(65);
 }
-.card{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    color: $black;
-    position: relative;
-    padding-top: rem(20);
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: $black;
+  position: relative;
+  padding-top: rem(20);
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        width: rem(36);
-        height: 2px;
-        background-color: $black;
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: rem(36);
+    height: 2px;
+    background-color: $black;
+  }
 }
 .worker {
-    font-weight: 600;
-    cursor: text;
-    font-size: rem(22);
-    margin-bottom: rem(15);
+  font-weight: 600;
+  cursor: text;
+  font-size: rem(22);
+  margin-bottom: rem(15);
 }
 .text {
-    cursor: text;
-    font-weight: 300;
-    line-height: 1.5;
-    margin-bottom: rem(5);
+  cursor: text;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: rem(5);
 }

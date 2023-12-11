@@ -1,31 +1,35 @@
 @import "@/shared/styles/_vars";
 
 .ourClientsPage {
-    padding-top: rem(50);
-    padding-bottom: rem(400);
-    background-color: #fff;
+  padding-top: rem(50);
+  padding-bottom: rem(400);
+  background-color: #fff;
 }
 .container {
-    @include container();
+  @include container();
 }
 .title {
-    @include manrope(600);
-    font-size: rem(40);
-    color: $black;
-    text-align: center;
-    max-width: rem(625);
-    margin: 0 auto;
-    text-wrap: pretty;
+  @include manrope(600);
+  font-size: rem(40);
+  color: $black;
+  text-align: center;
+  max-width: rem(625);
+  margin: 0 auto;
+  text-wrap: pretty;
 }
 .slider {
-    margin-top: rem(20);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 rem(36);
-    width: 100%;
-    cursor: grab;
+  margin-top: rem(20);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 rem(36);
+  width: 100%;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 .slide {
-    user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
