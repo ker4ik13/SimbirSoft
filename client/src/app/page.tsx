@@ -5,6 +5,7 @@ import { GetOrder } from "@/widgets/GetOrder/GetOrder";
 import { Map } from "@/widgets/Map/Map";
 import { OneHour } from "@/widgets/OneHour/OneHour";
 import { OurClients } from "@/widgets/OurClients/OurClients";
+import { Price } from "@/widgets/Price/Price";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <EscortFirstScreen />
       <EscortWorks />
       <CmsWeWork />
+      <Price />
       <OneHour />
       <OurClients />
       <GetOrder />

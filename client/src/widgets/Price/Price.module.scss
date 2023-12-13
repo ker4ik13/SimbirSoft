@@ -2,6 +2,8 @@
 
 .priceBlock {
     background-color: $gray100;
+    padding-top: rem(70);
+    padding-bottom: rem(100);
 }
 .container {
     @include container();
@@ -17,4 +19,69 @@
     @include manrope(300);
     font-size: rem(24);
     color: $gray800;
+    margin-top: rem(10);
+}
+.columns {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: rem(10);
+    margin-top: rem(50);
+}
+.rateCol {
+    display: flex;
+    flex-direction: column;
+    @include manrope(400);
+    cursor: default;
+}
+.rateTitle {
+    @include manrope(900);
+    font-size: rem(20);
+    color: $gray800;
+}
+.ratePrice {
+    @include manrope(300);
+    font-size: rem(32);
+    color: $gray800;
+}
+.rateTimes {
+    margin-top: rem(16);
+    padding-bottom: rem(30);
+    border-bottom: rem(1) solid #EEEEF1;
+}
+.rateTime {
+    font-size: rem(16);
+    color: $gray800;
+    @include manrope(300);
+    line-height: 1.4;
+}
+.services {
+}
+.servicesTitle {
+    margin-top: rem(30);
+    @include manrope(500);
+    color: $gray800;
+    line-height: 1.4;
+}
+.serviceList {
+    list-style-image: url('../../data/images/done.svg');
+    margin-top: rem(10);
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+    padding-left: rem(20);
+}
+.serviceItem {
+    cursor: text;
+    height: rem(30);
+
+   &.disactive {
+    width: 100%;
+    height: rem(4);
+    margin: rem(13) 0;
+    background-color: #EEEEF1;
+    list-style: none;
+    line-height: 1.4;
+    cursor: default;
+   }
 }
