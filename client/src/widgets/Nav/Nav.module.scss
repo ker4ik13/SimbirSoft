@@ -3,6 +3,7 @@
 .nav {
   padding: rem(10);
   background-color: #fefefe;
+  @include manrope(400);
 }
 .navWrapper {
   @include container();

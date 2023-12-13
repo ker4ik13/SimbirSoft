@@ -51,6 +51,7 @@
     transition: .2s;
     width: 100%;
     height: rem(70);
+    @include manrope(400);
 
     &:hover {
         background-color: rgba(237, 132, 136, .4);

@@ -31,6 +31,8 @@
     color: $black;
     position: relative;
     padding-top: rem(20);
+    @include manrope(400);
+
 
     &::before {
         content: '';

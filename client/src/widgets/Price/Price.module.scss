@@ -1,0 +1,20 @@
+@import "@/shared/styles/_vars";
+
+.priceBlock {
+    background-color: $gray100;
+}
+.container {
+    @include container();
+}
+.title {
+    text-align: center;
+    @include manrope(600);
+    font-size: rem(40);
+    color: $gray800;
+}
+.subtitle {
+    text-align: center;
+    @include manrope(300);
+    font-size: rem(24);
+    color: $gray800;
+}
