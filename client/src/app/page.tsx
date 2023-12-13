@@ -7,13 +7,15 @@ import { OneHour } from "@/widgets/OneHour/OneHour";
 import { OurClients } from "@/widgets/OurClients/OurClients";
 
 export default function Home() {
-  return <main>
-    <EscortFirstScreen/>
-    <EscortWorks/>
-    <CmsWeWork/>
-    <OneHour/>
-    <OurClients/>
-    <GetOrder/>
-    <Map/>
-  </main>;
+  return (
+    <main>
+      <EscortFirstScreen />
+      <EscortWorks />
+      <CmsWeWork />
+      <OneHour />
+      <OurClients />
+      <GetOrder />
+      <Map />
+    </main>
+  );
 }

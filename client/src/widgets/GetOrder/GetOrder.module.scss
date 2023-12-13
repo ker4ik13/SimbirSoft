@@ -1,85 +1,102 @@
 @import "@/shared/styles/_vars";
 
 .getOrderPage {
-    background-color: transparent;
-    margin-top: rem(-330);
-    position: relative;
-    z-index: 2;
+  background-color: transparent;
+  margin-top: rem(-330);
+  position: relative;
+  z-index: 2;
 }
 .getOrderModal {
-    max-width: rem(1390);
-    width: 100%;
-    margin: 0 auto;
-    background-color: $red500;
-    height: 500px;
-    padding: rem(80) rem(100);
-    border-radius: rem(24);
+  max-width: rem(1390);
+  width: 100%;
+  margin: 0 auto;
+  background-color: $red500;
+  height: 500px;
+  padding: rem(80) rem(100);
+  border-radius: rem(24);
 }
 .title {
-    @include manrope(600);
-    font-size: rem(43);
-    color: $gray100;
+  @include manrope(600);
+  font-size: rem(43);
+  color: $gray100;
 }
 .desc {
-    @include manrope(300);
-    font-size: rem(22);
-    line-height: 1.5;
-    color: #EEEEF1;
-    margin-top: rem(4);
-    max-width: rem(653);
+  @include manrope(300);
+  font-size: rem(22);
+  line-height: 1.5;
+  color: #eeeef1;
+  margin-top: rem(4);
+  max-width: rem(653);
 }
 .inputs {
-    margin-top: rem(30);
-    display: flex;
-    align-items: center;
-    gap: rem(10);
+  margin-top: rem(30);
+  display: flex;
+  align-items: center;
+  gap: rem(10);
 }
 .inputWrapper {
-    position: relative;
-    max-width: rem(310);
-    width: 100%;
+  position: relative;
+  max-width: rem(310);
+  width: 100%;
 }
 .input {
-    font-size: rem(18);
-    color: #fff;
-    background-color: rgba(237, 132, 136, .2);
-    outline: none;
-    border: none;
-    padding: rem(22) rem(26);
-    border-radius: rem(8);
-    border: rem(1) solid rgba(251, 214, 212, 0.2);
-    transition: .2s;
-    width: 100%;
-    height: rem(70);
-    @include manrope(400);
+  font-size: rem(18);
+  color: #fff;
+  background-color: rgba(237, 132, 136, 0.2);
+  outline: none;
+  border: none;
+  padding: rem(22) rem(26);
+  border-radius: rem(8);
+  border: rem(1) solid rgba(251, 214, 212, 0.2);
+  transition: 0.2s;
+  width: 100%;
+  height: rem(70);
 
-    &:hover {
-        background-color: rgba(237, 132, 136, .4);
-    }
+  &:hover {
+    background-color: rgba(237, 132, 136, 0.4);
+  }
 
-    &:focus {
-        background-color: rgba(237, 132, 136, .5);
-    }
+  &:focus {
+    background-color: rgba(237, 132, 136, 0.5);
+  }
 
-    &::placeholder {
-        opacity: .8;
-    }
+  &::-webkit-input-placeholder {
+    opacity: 0.8;
+  }
+
+  &::-moz-placeholder {
+    opacity: 0.8;
+  }
+
+  &:-ms-input-placeholder {
+    opacity: 0.8;
+  }
+
+  &::-ms-input-placeholder {
+    opacity: 0.8;
+  }
+
+  &::placeholder {
+    opacity: 0.8;
+  }
 }
 .submitButton {
-    filter: drop-shadow(0 rem(12) rem(20) rgba(0, 0, 0, 0.25));
-    background-color: $gray100;
-    border-radius: rem(8);
-    padding: rem(22) rem(40);
-    color: $red500;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: none;
-    border: 0;
-    outline: 0;
-    transition: .2s;
-    height: rem(70);
+  -webkit-filter: drop-shadow(0 rem(12) rem(20) rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 rem(12) rem(20) rgba(0, 0, 0, 0.25));
+  background-color: $gray100;
+  border-radius: rem(8);
+  padding: rem(22) rem(40);
+  color: $red500;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  transition: 0.2s;
+  height: rem(70);
 
-    &:hover {
-        filter: drop-shadow(0 0 rem(10) rgba(255, 255, 255, .3));
-    }
+  &:hover {
+    -webkit-filter: drop-shadow(0 0 rem(10) rgba(255, 255, 255, 0.3));
+    filter: drop-shadow(0 0 rem(10) rgba(255, 255, 255, 0.3));
+  }
 }
