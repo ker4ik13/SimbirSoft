@@ -63,24 +63,24 @@ const prices: IRate[] = [
                 done: true,
                 serviceText: 'Изменение функционала',
             },
-           {
-            done: false,
-           },
-           {
-            done: false,
-           },
-           {
-            done: false,
-           },
-           {
-            done: false,
-           },
-           {
-            done: false,
-           },
-           {
-            done: false,
-           },
+            {
+                done: false,
+            },
+            {
+                done: false,
+            },
+            {
+                done: false,
+            },
+            {
+                done: false,
+            },
+            {
+                done: false,
+            },
+            {
+                done: false,
+            },
         ],
     },
     {
@@ -166,32 +166,32 @@ const isDoneElement = (value: { done: boolean, serviceText?: string } | null): s
 }
 
 export const Price = () => {
-  return (
-    <div className={s.priceBlock}>
-        <div className={s.container}>
-            <h3 className={s.title}>Сколько стоит администрирование сайта?</h3>
-            <p className={s.subtitle}>Тарифы сформированы под объем потребностей и размеры компании</p>
-            <div className={s.columns}>
-                {prices &&  prices.length !== 0 && prices.map((rate, i) => (
-                    <div className={s.rateCol} key={i}>
-                        <h4 className={s.rateTitle}>{rate.title}</h4>
-                        <p className={s.ratePrice}>{rate.price.toLocaleString('ru')} ₽/мес</p>
-                        <div className={s.rateTimes}>
-                            <p className={s.rateTime}>{rate.workTime}</p>
-                            <p className={s.rateTime}>Время реакции: {rate.reactionTime}</p>
+    return (
+        <div className={s.priceBlock}>
+            <div className={s.container}>
+                <h3 className={s.title}>Сколько стоит администрирование сайта?</h3>
+                <p className={s.subtitle}>Тарифы сформированы под объем потребностей и размеры компании</p>
+                <div className={s.columns}>
+                    {prices && prices.length !== 0 && prices.map((rate, i) => (
+                        <div className={s.rateCol} key={i}>
+                            <h4 className={s.rateTitle}>{rate.title}</h4>
+                            <p className={s.ratePrice}>{rate.price.toLocaleString('ru')} ₽/мес</p>
+                            <div className={s.rateTimes}>
+                                <p className={s.rateTime}>{rate.workTime}</p>
+                                <p className={s.rateTime}>Время реакции: {rate.reactionTime}</p>
+                            </div>
+                            <div className={s.services}>
+                                <p className={s.servicesTitle}>{rate.listTitle ? rate.listTitle : 'Включенные услуги:'}</p>
+                                <ul className={s.serviceList}>
+                                    {rate.services.map((service, i) => (
+                                        <li className={`${s.serviceItem} ${isDoneElement(service)}`} key={i}>{service && service.done ? service.serviceText : ''}</li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                        <div className={s.services}>
-                            <p className={s.servicesTitle}>{rate.listTitle ? rate.listTitle : 'Включенные услуги:'}</p>
-                            <ul className={s.serviceList}>
-                                {rate.services.map((service, i) => (
-                                    <li className={`${s.serviceItem} ${isDoneElement(service)}`} key={i}>{service && service.done ? service.serviceText : ''}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
-    </div>
-  )
+    )
 }

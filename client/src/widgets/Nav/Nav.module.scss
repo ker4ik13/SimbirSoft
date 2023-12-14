@@ -4,6 +4,8 @@
   padding: rem(10);
   background-color: #fefefe;
   @include manrope(400);
+  position: relative;
+  z-index: 100;
 }
 .navWrapper {
   @include container();
@@ -14,10 +16,96 @@
 
   &:first-child {
     justify-content: space-between;
+    border-bottom: rem(2) solid rgba(0, 0, 0, 0.1);
+    padding-bottom: rem(20);
+
+    @media (max-width: $max-1000) {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
   }
 
-  &:last-child {
-    border-top: rem(2) solid rgba(0, 0, 0, 0.1);
+  @media (max-width: $max-1000) {
+    background-color: $gray100;
+    flex-direction: column;
+
+    &:last-child {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(0, -500%);
+      background-color: $gray100;
+      z-index: 2;
+      transition: .2s ease-in-out;
+
+      &.active {
+        transform: translate(0, rem(350));
+      }
+    }
+  }
+}
+.upperWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 20;
+
+  @media (max-width: $max-1000) {
+    width: 100%;
+  }
+}
+.burger {
+  width: rem(30);
+  height: rem(30);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: rem(50);
+  position: relative;
+  border: 0;
+  outline: none;
+  transition: .2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.3);;
+  }
+
+  & span:first-child::before {
+    content: '';
+    transition: .2s ease-in-out;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: $gray800;
+    width: 60%;
+    height: rem(2);
+    border-radius: rem(50);
+  }
+  & span:last-child::before {
+    content: '';
+    transition: .2s ease-in-out;
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: $gray800;
+    width: 60%;
+    height: rem(2);
+    border-radius: rem(50);
+  }
+
+  &.active {
+    & span:first-child::before {
+      transform: translate(-50%, 100%) rotate(45deg);
+    }
+    & span:last-child::before {
+      transform: translate(-50%, -100%) rotate(-45deg);
+    }
+  }
+
+  @media (min-width: $max-1000) {
+    display: none;
   }
 }
 .links {
@@ -27,6 +115,13 @@
   gap: rem(20);
   width: 100%;
   margin-top: rem(10);
+
+  @media (max-width: $max-1000) {
+    flex-direction: column;
+    align-items: flex-end;
+    padding: rem(10) rem(20);
+    margin-top: rem(10);
+  }
 }
 .navLink {
   font-size: rem(18);
@@ -43,6 +138,31 @@
   display: flex;
   align-items: center;
   gap: rem(30);
+  transition: .2s ease-in;
+
+  @media (max-width: $max-1200) {
+    margin-left: rem(40);
+    gap: rem(20);
+  }
+
+  @media (max-width: $max-1000) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(0, -500%);
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: rem(20);
+    background-color: #fff;
+    width: 100%;
+    padding: rem(30) rem(20);
+    padding-top: rem(40);
+
+    &.active {
+      transform: translate(0, 0);
+      z-index: 2;
+    }
+  }
 }
 .place {
   display: flex;

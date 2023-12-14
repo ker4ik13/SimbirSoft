@@ -12,6 +12,7 @@ body.blur {
   overflow: hidden;
   transition: 0.2s;
 
+
   &:before {
     content: "";
     position: absolute;

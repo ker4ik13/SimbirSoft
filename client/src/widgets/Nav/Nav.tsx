@@ -1,15 +1,38 @@
+'use client';
+
 import Logo from "@/shared/Logo/Logo";
 import s from "./Nav.module.scss";
 import Link from "next/link";
 import { BsFillGeoAltFill } from "react-icons/bs";
 import { FaPhoneAlt, FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
+import { useRef, type MouseEvent } from "react";
 
 export const Nav = () => {
+
+  const contactsBlock = useRef<HTMLDivElement | null>(null);
+  const linksBlock = useRef<HTMLDivElement | null>(null);
+
+  const handleNav = (event: MouseEvent<HTMLButtonElement>) => {
+    event.currentTarget.classList.toggle(s.active);
+    if (contactsBlock.current && linksBlock.current) {
+      contactsBlock.current.classList.toggle(s.active);
+      linksBlock.current.classList.toggle(s.active);
+      document.body.classList.toggle('overflow');
+      document.body.classList.toggle('blur');
+    }
+  }
+
   return (
     <nav className={s.nav}>
       <div className={s.navWrapper}>
-        <Logo />
-        <div className={s.contacts}>
+        <div className={s.upperWrapper}>
+          <Logo />
+          <button type="button" className={s.burger} onClick={(event) => handleNav(event)}>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <div className={s.contacts} ref={contactsBlock}>
           <Link
             href='https://yandex.ru/maps/-/CDquBKo8'
             target='_blank'
@@ -42,7 +65,7 @@ export const Nav = () => {
           </button>
         </div>
       </div>
-      <div className={s.navWrapper}>
+      <div className={s.navWrapper} ref={linksBlock}>
         <div className={s.links}>
           <Link href='#' className={s.navLink}>
             О нас

@@ -87,6 +87,15 @@ export const EscortWorks = () => {
         centerInsufficientSlides
         centeredSlidesBounds
         centeredSlides
+
+        breakpoints={{
+          1300: {
+            slidesPerView: 5,
+          },
+          200: {
+            slidesPerView: 1,
+          },
+        }}
         className={s.works}
         autoplay={{
           delay: 2500,
