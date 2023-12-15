@@ -11,13 +11,13 @@ export default function Home() {
   return (
     <main>
       <EscortFirstScreen />
-      {/* <EscortWorks />
+      <EscortWorks />
       <CmsWeWork />
       <Price />
       <OneHour />
       <OurClients />
       <GetOrder />
-      <Map /> */}
+      <Map />
     </main>
   );
 }
